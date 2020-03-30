@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Ecuacion Cuadratica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <p>Ingresar Valor de a:</p><input type = "int" id = "a" value = "" >
+        <p>Ingresar Valor de b:</p><input type = "int" id = "b" value = "" >
+        <p>Ingresar Valor de c:</p><input type = "int" id = "c" value = "" >
+
+        <button onclick="Cuadratica()">Probar</button>
+
+        <p id="1"></p>
+
+        <script>
+
+            function Cuadratica() {
+
+                var a = parseFloat(document.getElementById("a").value);
+                var b = parseFloat(document.getElementById("b").value);
+                var c = parseFloat(document.getElementById("c").value);
+                
+                var q = (-b);
+                var w = (b*b);
+                var e = ((4*a)*c);
+                var r = (a*2);
+                var t = Math.sqrt(w-e);
+                var k = (q+t)/r;
+                var l = (q-t)/r;
+                
+                document.getElementById("1").innerHTML = "X1: " +k+ " X2: " +l;
+            }
+        </script>
+        <a href="http://localhost:8383/Taller/Primo.html">Siguiente Actividad</a>
+    </body>
+</html>

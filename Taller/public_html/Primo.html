@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Numero Primo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <p>Ingrese un Numero:</p><input type = "int" id = "a" value = "" >
+
+        <button onclick="Primo()">Probar</button>
+
+        <p id="2"></p>
+        
+        <script>
+            function Primo(){
+                var num = parseFloat(document.getElementById("a").value);
+                
+                var primo;
+                var i=0;
+                
+                for(i=2;i<num;i++){
+                    if(num%1==0){
+                        primo = false;
+                    }
+                }
+                if(primo == true){
+                    document.getElementById("2").innerHTML = "El Numero: " +num+ " es primo";
+                }else{
+                    document.getElementById("2").innerHTML = "El Numero: " +num+ " NO es primo";
+                }
+            }
+        </script>
+    </body>
+</html>
