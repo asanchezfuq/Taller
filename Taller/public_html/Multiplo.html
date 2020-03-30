@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Multiplo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <p>Escribe Un Numero:</p><input type = "int" id = "a" value = "" >
+        <p>Escribe Un Numero:</p><input type = "int" id = "b" value = "" >
+
+        <button onclick="Multiplo()">Probar</button>
+
+        <p id="2"></p>
+
+        <script>
+            function Multiplo() {
+                var n1 = parseFloat(document.getElementById("a").value);
+                var n2 = parseFloat(document.getElementById("b").value);
+
+                if (((n2 % n1) == 0)) {
+                    document.getElementById("2").innerHTML = "El Número: " + n2 + " es Multiplo de: " + n1;
+                }else{
+                    document.getElementById("2").innerHTML = "El Número: " + n2 + " No es Multiplo de: " + n1;
+                }
+            }
+        </script>
+        <a href="http://localhost:8383/Taller/Bisiesto.html">Siguiente Actividad</a>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Número Mayor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+<p>Escribe Primer Numero:</p><input type = "int" id = "a" value = "" >
+<p>Escribe Segundo Numero:</p><input type = "int" id = "b" value = "" >
+<p>Escribe Tercer Numero:</p><input type = "int" id = "c" value = "" >
+
+<button onclick="Mayor()">Probar</button>
+
+                <p id="2"></p>
+
+        <script>
+            function Mayor() {
+                var n1 = parseFloat(document.getElementById("a").value);
+                var n2 = parseFloat(document.getElementById("b").value);
+                var n3 = parseFloat(document.getElementById("c").value);
+                
+                if ((n1 > n2 && n1 > n3)) {
+                    document.getElementById("2").innerHTML = "El Número Mayor es:"+n1;
+                } else {
+                    if ((n2 > n1 && n2 > n3)) {
+                        document.getElementById("2").innerHTML = "El Número Mayor es:"+n2;
+                    } else {
+                        if ((n3 > n1 && n3 > n2)) {
+                            document.getElementById("2").innerHTML = "El Número Mayor es:"+n3;
+                        }
+                    }
+                }
+            }
+        </script>
+        <a href="http://localhost:8383/Taller/Ordenacion%203%20numeros.html">Siguiente Actividad</a>
+    </body>
+</html>

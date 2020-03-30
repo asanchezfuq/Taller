@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Año Bisiesto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Escribe Un Año:</p><input type = "int" id = "a" value = "" >
+
+        <button onclick="Bisiesto()">Probar</button>
+
+        <p id="2"></p>
+
+        <script>
+            function Bisiesto() {
+                var n1 = parseFloat(document.getElementById("a").value);
+
+                if ((n1 % 4 == 0 && n1 % 100 != 0) || n1 % 400 == 0) {
+                    document.getElementById("2").innerHTML = "El Año es Bisiesto";
+                }else{
+                    document.getElementById("2").innerHTML = "El Año No es Bisiesto";
+                }
+            }
+        </script>
+        <a href="http://localhost:8383/Taller/Nomina.html">Siguiente Actividad</a>
+    </body>
+</html>

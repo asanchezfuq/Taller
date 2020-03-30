@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Ordenacion 3 Numeros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <p>Escribe Primer Numero:</p><input type = "int" id = "a" value = "" >
+        <p>Escribe Segundo Numero:</p><input type = "int" id = "b" value = "" >
+        <p>Escribe Tercer Numero:</p><input type = "int" id = "c" value = "" >
+
+        <button onclick="Mayor(); Medio(); Menor()">Probar</button>
+
+        <p id="2"></p>
+
+        <script>
+            function Mayor() {
+                var n1 = parseFloat(document.getElementById("a").value);
+                var n2 = parseFloat(document.getElementById("b").value);
+                var n3 = parseFloat(document.getElementById("c").value);
+                
+                if ((n1 > n2 && n1 > n3)) {
+                    document.getElementById("2").innerHTML = "El Número Mayor es:"+n1;
+                } else {
+                    if ((n2 > n1 && n2 > n3)) {
+                        document.getElementById("2").innerHTML = "El Número Mayor es:"+n2;
+                    } else {
+                        if ((n3 > n1 && n3 > n2)) {
+                            document.getElementById("2").innerHTML = "El Número Mayor es:"+n3;
+                        }
+                    }
+                }
+            }
+        </script>
+        
+        <p id="3"></p>
+        
+        <script>
+            function Medio() {
+                var n1 = parseFloat(document.getElementById("a").value);
+                var n2 = parseFloat(document.getElementById("b").value);
+                var n3 = parseFloat(document.getElementById("c").value);
+
+                if ((n1 > n2 && n1 < n3 || n1 < n2 && n1 > n3)) {
+                    document.getElementById("3").innerHTML = "El Número del Medio es:"+n1;
+                } else {
+                    if ((n2 > n1 && n2 < n3 || n2 < n1 && n2 > n3)) {
+                        document.getElementById("3").innerHTML = "El Número del Medio es:"+n2;
+                    } else {
+                        if ((n3 > n1 && n3 < n2 || n3 < n1 && n3 > n2)) {
+                            document.getElementById("3").innerHTML = "El Número del Medio es:"+n3;
+                            }
+                        }
+                    }
+                }
+        </script>
+        
+        <p id="4"></p>
+
+        <script>
+            function Menor() {
+                var n1 = parseFloat(document.getElementById("a").value);
+                var n2 = parseFloat(document.getElementById("b").value);
+                var n3 = parseFloat(document.getElementById("c").value);
+                
+                if ((n1 < n2 && n1 < n3)) {
+                    document.getElementById("4").innerHTML = "El Número Menor es:"+n1;
+                } else {
+                    if ((n2 < n1 && n2 < n3)) {
+                        document.getElementById("4").innerHTML = "El Número Menor es:"+n2;
+                    } else {
+                        if ((n3 < n1 && n3 < n2)) {
+                            document.getElementById("4").innerHTML = "El Número Menor es:"+n3;
+                        }
+                    }
+                }
+            }
+        </script>
+        <a href="http://localhost:8383/Taller/Multiplo.html">Siguiente Actividad</a>
+    </body>
+</html>
