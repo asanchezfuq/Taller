@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Descuentos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <p>Numero de Escritorios:</p><input type = "int" id = "a" value = "" >
+
+        <button onclick="Descuento()">Probar</button>
+
+        <p id="2"></p>
+
+        <script>
+            
+            function Descuento() {
+                    
+                    var n = parseFloat(document.getElementById("a").value);
+                    var compra = (n * 650000);
+                    var dcto = ((compra * 10) / 100);
+                    var dcto1 = ((compra * 20) / 100);
+                    var dcto2 = ((compra * 40) / 100);
+                    var total = (compra - dcto);
+                    var total1 = (compra - dcto1);
+                    var total2 = (compra - dcto2);
+                    
+                    if (n < 5) {
+                    document.getElementById("2").innerHTML = "El valor a pagar es: " +total;
+                } else {
+                    if (n >= 5 && n<10) {
+                        document.getElementById("2").innerHTML = "El valor a pagar es: " +total1;
+                    } else {
+                        if (n > 10) {
+                            document.getElementById("2").innerHTML = "El valor a pagar es: " +total2;
+                        }
+                    }
+                }
+            }    
+        </script>
+        <a href="http://localhost:8383/Taller/Matricula.html">Siguiente Actividad</a>
+    </body>
+</html>

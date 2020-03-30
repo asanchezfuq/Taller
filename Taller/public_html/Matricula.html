@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Matricula</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <p>Numero de Creditos:</p><input type = "int" id = "a" value = "" >
+        <p>Valor de Credito:</p><input type = "int" id = "b" value = "" >
+        <p>Estrado del Estudiante:</p><input type = "int" id = "c" value = "" >
+
+        <button onclick="Credito();Subsidio()">Probar</button>
+
+        <p id="2"></p>
+        
+        <script>
+            
+            function Credito(){
+                
+                var cantcred = parseFloat(document.getElementById("a").value);
+                var vcred = parseFloat(document.getElementById("b").value);
+                var estrato = parseFloat(document.getElementById("c").value)
+                
+                var credextra = cantcred - 20;
+                var cred2 = credextra * (vcred*2);
+                var mat = cantcred * vcred;
+                var mat2 = ((cantcred - credextra)*vcred) + cred2;
+                var est1 = ((mat * 80) / 100);
+                var est2 = ((mat * 50) / 100);
+                var est3 = ((mat * 30) / 100);
+                var est4 = ((mat2 * 80) / 100);
+                var est5 = ((mat2 * 50) / 100);
+                var est6 = ((mat2 * 30) / 100);
+                var dcto1 = (mat-est1);
+                var dcto2 = (mat-est2);
+                var dcto3 = (mat-est3);
+                var dcto4 = (mat2-est4);
+                var dcto5 = (mat2-est5);
+                var dcto6 = (mat2-est6);
+                
+                if (cantcred<=20 && (estrato == 1)) {
+                    document.getElementById("2").innerHTML = "Costo de la Matricula: " +dcto1;
+                } else {
+                    if (cantcred<=20 && (estrato == 2)) {
+                        document.getElementById("2").innerHTML = "Costo de la Matricula: " +dcto2;
+                    } else {
+                        if (cantcred<=20 && (estrato == 3)) {
+                            document.getElementById("2").innerHTML = "Costo de la Matricula: " +dcto3;
+                        } else {
+                            if (cantcred>20 && (estrato == 1)){
+                                document.getElementById("2").innerHTML = "Costo de la Matricula: " +dcto4;
+                            } else {
+                                if(cantcred>20 && (estrato == 2)){
+                                    document.getElementById("2").innerHTML = "Costo de la Matricula: " +dcto5;
+                                } else {
+                                    if(cantcred>20 && (estrato == 3)){
+                                        document.getElementById("2").innerHTML = "Costo de la Matricula: " +dcto6;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }  
+        </script>
+        
+        <p id="3"></p>
+        
+        <script>
+            
+            function Subsidio(){
+            
+            var estrato = parseFloat(document.getElementById("c").value)
+            var sub1 = 200000;
+            var sub2 = 100000;
+            
+            if(estrato == 1){
+                document.getElementById("3").innerHTML = "Valor del Subsidio: " +sub1;
+            }else{
+                if(estrato == 2){
+                    document.getElementById("3").innerHTML = "Valor del Subsidio: " +sub2;
+                }
+            }
+            
+            }
+            
+        </script>
+    </body>
+</html>
