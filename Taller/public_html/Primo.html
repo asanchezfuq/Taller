@@ -12,29 +12,27 @@ HTML5 / JavaScript
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        
+
         <p>Ingrese un Numero:</p><input type = "int" id = "a" value = "" >
 
         <button onclick="Primo()">Probar</button>
 
         <p id="2"></p>
-        
+
         <script>
-            function Primo(){
+            function Primo() {
                 var num = parseFloat(document.getElementById("a").value);
-                
-                var primo;
-                var i=0;
-                
-                for(i=2;i<num;i++){
-                    if(num%1==0){
-                        primo = false;
+                var i;
+                var primer = true;
+                for (i = 2; i < num / 2; i++) {
+                    if (num % i === 0) {
+                        primer = false;
                     }
                 }
-                if(primo == true){
-                    document.getElementById("2").innerHTML = "El Numero: " +num+ " es primo";
-                }else{
-                    document.getElementById("2").innerHTML = "El Numero: " +num+ " NO es primo";
+                if (primer) {
+                    document.getElementById("2").innerHTML = "El Numero: " +num+ " es Primo ";
+                } else {
+                    document.getElementById("2").innerHTML = "El Numero: " +num+ " No es Primo ";
                 }
             }
         </script>
