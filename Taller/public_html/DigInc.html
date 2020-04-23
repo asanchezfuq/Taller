@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+Andrés Felipe Sánchez Fuquen ID: 593664
+Programación Web NRC: 7478
+03 / 2020
+HTML5 / JavaScript
+-->
+<html>
+    <head>
+        <title>Digit Increasing</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>Ingrese un Numero:</p><input type = "int" id = "a" value = "" >
+
+        <button onclick="isDigitIncreasing()">Probar</button>
+
+        <p id="2"></p>
+
+        <script>
+            function isDigitIncreasing() {
+                var Num1 = (parseFloat(document.getElementById("a").value))
+
+                var n = 1;
+                var i = 1;
+
+                while (n <= Num1) {
+                    if (Num1 % n == 0 && n * 10 > Num1) {
+                        return document.getElementById("2").innerHTML = "1";
+                    }
+                    i = i + 1
+                    n = n * 10 + i
+                }
+                return document.getElementById("2").innerHTML = "0";
+            }
+        </script>
+    </body>
+</html>
